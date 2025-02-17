@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/results.css">
+    <title>Game Results</title>
+</head>
+<body>
+    <div class="results-container">
+        <h1>Game Results</h1>
+        <div class="winner-announcement" id="winnerAnnouncement"></div>
+        
+        <div class="charts-container">
+            <div class="chart">
+                <div class="bars-container" id="barsContainer"></div>
+                <div class="chart-labels" id="chartLabels"></div>
+            </div>
+        </div>
+
+        <div class="words-summary">
+            <h2>Valid Words</h2>
+            <div id="validWords"></div>
+        </div>
+
+        <button class="play-again"id="resetgame" onclick="window.location.href='index.html'">
+            Play Again
+        </button>
+    </div>
+    <script src="scritpt/results.js"></script>
+</body>
+</html> 
