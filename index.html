@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/Style.css">
+    <title>Alphabet Wheel Game</title>
+</head>
+<body>
+    <div class="player-selection">
+        <h2>Select Number of Players</h2>
+        <div class="player-buttons">
+            <button class="player-btn" data-players="2">2 Players</button>
+            <button class="player-btn" data-players="3">3 Players</button>
+            <button class="player-btn" data-players="4">4 Players</button>
+        </div>
+        <div class="player-scores" id="playerScores">
+            <!-- Player scores will be added here dynamically -->
+        </div>
+    </div>
+
+    <div class="wheel-container">
+        <div class="pointer"></div>
+        <div class="wheel" id="wheel">
+            <div class="center">SPIN</div>
+        </div>
+    </div>
+<script src="scritpt/index.js"></script>
+<script src="scritpt/game.js"></script>
+</body>
+</html>
