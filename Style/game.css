@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #87CEEB, #4169E1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.selected-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2196F3;
+}
+
+.current-player {
+    font-size: 1.5rem;
+    color: #FF4500;
+    font-weight: bold;
+}
+
+.word-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.word-input:focus {
+    border-color: #2196F3;
+}
+
+.words-container {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.word-item {
+    background: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reset-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(234, 0, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reset-button:hover {
+    background-color: darkred;
+}

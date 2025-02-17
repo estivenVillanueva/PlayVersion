@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/game.css">
+    <title>Word Game</title>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <div class="current-player" id="currentPlayer">Player 1</div>
+            <div class="timer" id="timer">01:00</div>
+            <div class="selected-letter" id="selectedLetter">A</div>
+        </div>
+
+        <input type="text" 
+               class="word-input" 
+               id="wordInput" 
+               placeholder="Type a word with the selected letter...">
+
+        <div class="words-container" id="wordsContainer">
+            <!-- Words will be added here dynamically -->
+        </div>
+        <button id="resetGame" class="reset-button">🔄 Reiniciar Juego</button>
+    </div>
+  
+
+<script src="scritpt/game.js"></script>
+</body>
+</html> 
