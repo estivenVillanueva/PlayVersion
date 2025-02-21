@@ -33,7 +33,7 @@ function startTimer() {
     }, 1000);
 }
 
-alert(`empezo el juego , jugador 1`)
+alert(`Game started, player 1`);
 
 // 🔥 Arreglos donde se guardan las palabras de cada jugador
 const playersWords = Array.from({ length: totalPlayers }, () => []);
@@ -76,13 +76,13 @@ wordInput.addEventListener('keypress', (e) => {
         const word = wordInput.value.trim().toUpperCase();
 
         if (!word.startsWith(letter)) {
-            alert(`La palabra debe empezar con "${letter}"`);
+            alert(`Word must start with "${letter}"`);
             wordInput.value = '';
             return;
         }
 
         if (word.length < 2) {
-            alert("La palabra debe tener al menos 2 letras");
+            alert("Word must have at least 2 letters");
             wordInput.value = '';
             return;
         }
@@ -91,7 +91,7 @@ wordInput.addEventListener('keypress', (e) => {
         const isWordUsedByCurrentPlayer = playersWords[currentTurnPlayer - 1].includes(word);
 
         if (isWordUsedByCurrentPlayer) {
-            alert("Ya has usado esta palabra. Intenta otra diferente.");
+            alert("You have already used this word. Try another one.");
             wordInput.value = '';
             return;
         }
@@ -110,7 +110,7 @@ function nextPlayer() {
     if (currentTurnPlayer === totalPlayers) {
         showWinner();
     } else {
-        alert(`Siguiente jugador`);
+        alert(`Next player`);
         currentTurnPlayer++;
         document.getElementById('currentPlayer').textContent = `Player ${currentTurnPlayer}`;
         wordInput.disabled = false; // ✅ Reactivar input para el siguiente jugador
@@ -123,10 +123,10 @@ function showWinner() {
     clearInterval(timerInterval);
     let maxWords = 0;
     let winnerPlayer = null;
-    let resultsText = "<h2>Resultados:</h2>";
+    let resultsText = "<h2>Results:</h2>";
 
     playersWords.forEach((words, index) => {
-        resultsText += `<p>Player ${index + 1}: ${words.length} palabras</p>`;
+        resultsText += `<p>Player ${index + 1}: ${words.length} words</p>`;
         if (words.length > maxWords) {
             maxWords = words.length;
             winnerPlayer = index + 1;
@@ -134,8 +134,8 @@ function showWinner() {
     });
 
     resultsText += winnerPlayer 
-        ? `<h1>🏆 Ganador: Player ${winnerPlayer}! 🏆</h1>` 
-        : "<h1>¡Es un empate!</h1>";
+        ? `<h1>🏆 Winner: Player ${winnerPlayer}! 🏆</h1>` 
+        : "<h1>It's a tie!</h1>";
 
     wordsContainer.innerHTML = resultsText;
 }
