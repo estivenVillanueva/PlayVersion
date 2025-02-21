@@ -81,6 +81,12 @@ wordInput.addEventListener('keypress', (e) => {
             return;
         }
 
+        if (word.length < 2) {
+            alert("La palabra debe tener al menos 2 letras");
+            wordInput.value = '';
+            return;
+        }
+
         // 🚀 Revisar si la palabra ya fue usada por el mismo jugador
         const isWordUsedByCurrentPlayer = playersWords[currentTurnPlayer - 1].includes(word);
 
